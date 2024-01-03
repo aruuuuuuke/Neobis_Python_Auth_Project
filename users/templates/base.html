@@ -1,0 +1,68 @@
+<!-- base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Website{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* голубой цвет фона */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4682b4; /* голубой цвет хедера */
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #87ceeb; /* голубой цвет навигации */
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        footer {
+            background-color: #4682b4; /* голубой цвет футера */
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Your Website Header{% endblock %}</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <!-- Добавьте другие ссылки по мере необходимости -->
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        &copy; 2024 Your Website. All rights reserved.
+    </footer>
+</body>
+</html>
